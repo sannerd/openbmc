@@ -2,15 +2,15 @@ DESCRIPTION = "Linux kernel for OpenBMC"
 SECTION = "kernel"
 LICENSE = "GPLv2"
 
-KBRANCH ?= "dev-4.3"
+KBRANCH ?= "openbmc-20160212-1-firestone"
 KCONFIG_MODE="--alldefconfig"
 
-SRC_URI = "git://github.com/openbmc/linux;protocol=git;branch=${KBRANCH}"
+SRC_URI = "git://github.com/sannerd/linux;protocol=git;branch=${KBRANCH}"
 
 LINUX_VERSION ?= "4.3"
 LINUX_VERSION_EXTENSION ?= "-${SRCREV}"
 
-SRCREV="openbmc-20160212-1"
+SRCREV="${AUTOREV}"
 
 PV = "${LINUX_VERSION}+git${SRCPV}"
 
